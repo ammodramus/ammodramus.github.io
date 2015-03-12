@@ -1,0 +1,178 @@
+/*
+  Adapted from a stylesheet created by José Rojas Echenique (jireva.org)
+  Copyright: This stylesheet has been placed in the public domain.
+*/
+
+* {margin:0;padding:0;}
+ul, ol, blockquote, dd {margin-left: 2em;}
+dt {font-weight:bold;}
+p, hr, div, ol, ul, pre, math {margin-top: 1em; margin-bottom: 1em;}
+ul ul, ol ol, ul ol, ol ul {margin-top: 0em; margin-bottom: 0em;}
+th,td {padding-right: 0.2em; padding-left:0.2em;}
+th {white-space: nowrap; text-align: right;}
+td p {margin-top:0}
+
+div.document, body {
+    font-family: 'TeX Gyre Pagella', 'Palatino', serif;
+    /*background-color: #f0f2fd;*/ /* blueish */
+    /*background-color: #fdfdfd;*/ /* gray */
+    /*background-color: #f0fde3;*/ /* greenish */
+    /*background-color: #fdfaf0;*/ /* tannish */
+    background-color: #f2f6ff; /* blueish, again */
+
+    color: #4d4d4c;
+    line-height: 1.3;
+    max-width: 36em;
+    margin: auto;
+    width: 100%;
+    font-size: 16pt;
+    margin-bottom: 10em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #c82829; /* red */
+    /* color: #5286bc; */  /* blue, same as link */
+    /* color: #839b00; */ /* green */
+    margin-top: 1em;
+    /*margin-left: -1em;*/
+    font-weight: normal;
+}
+.title {font-size: 2.5em; text-align: center;}
+.subtitle {font-size:1em; text-align: center; margin-top: 0;}
+h1 {font-size: 1.7em;}
+h2 {font-size: 1.5em;}
+h3 {font-size: 1.3em;}
+
+
+hr {
+    margin: 2em;
+    border: 0;
+    text-align: center;
+}
+hr:after{
+    content:"❃	❃	❃";
+}
+
+a.toc-backref {
+    color: #d33682;
+    font-weight: normal;
+}
+a {
+    color: #268bd2;
+    text-decoration: none;
+}
+a:hover {
+    color: #cb4b16;
+    text-decoration: none;
+}
+
+.figure {
+    margin-top: 1em;
+    margin-bottom: 2em;
+}
+.caption {
+    margin-top: 0.5em;
+    font-style: italic;
+    text-align: center;
+}
+.legend {
+    margin-right: 3em;
+    margin-left: 3em;
+    font-size: 0.8em;
+}
+object, img {
+    display:block;
+    margin: auto;
+    max-width: 30em;
+}
+img {
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -o-crisp-edges;
+    image-rendering:-webkit-optimize-contrast;
+    -ms-interpolation-mode:nearest-neighbor;
+}
+pre.literal-block, pre.code {
+    background-color: #002b36;
+    color: #839496;
+}
+pre.literal-block, pre.doctest-block, pre.math, pre.code {
+    overflow: auto;
+    font-size: 0.8em;
+    padding: 1em;
+}
+
+div.math, div.chem, div.units  {
+    margin: auto;
+    text-align:center;
+}
+.hidden{display:none;}
+p span, tt, emph, strong {
+    /*background-color:#eee8d5; */ /* for tan background */
+    /*background-color:#dbe3f6; no background change */
+    padding-left: 0.2em;
+    padding-right: 0.2em;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+    border-style: none;
+    margin: 1em 0;
+}
+table * {
+	border-style: none;
+}
+.abstract:before {
+  content: "Abstract";
+  display: block;
+  margin-bottom: 0.5em;
+  text-align: center;
+  font-weight: bold;
+}
+.abstract {
+    padding: 1em 2em;
+    background-color:#eee8d5;
+}
+.admonition, .note {
+    background-color:#eee8d5;
+    padding: 1px 1em;
+}
+.admonition-title{
+    color:#2aa198;
+}
+.system-message{
+    border: solid;
+    padding-bottom: 1em;
+    padding-left: 1em;
+    border-color: #dc322f;
+}
+.system-message-title{
+    font-weight: bold;
+}
+
+.footer{font-size:0.7em;}
+
+.highlight{color:#eee8d5}
+
+.yellow{color:#b58900}
+.orange{color:#cb4b16}
+.red{color:#dc322f}
+.pink{color:#d33682}
+.purple{color:#6c71c4}
+.blue{color:#268bd2}
+.teal{color:#2aa198}
+.green{color:#859900}
+.white{color:#fdf6e3}
+.black{color:#002b36}
+
+@media only print
+{
+    * {
+       background: transparent !important;
+	   color: black !important;
+	   font-size: 12pt !important;
+    }
+    h1 {font-size: 18pt !important}
+    h2 {font-size: 16pt !important}
+    h3 {font-size: 14pt !important}
+}

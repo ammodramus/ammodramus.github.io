@@ -1,0 +1,90 @@
+===============
+Peter R. Wilton
+===============
+
+I am a graduate student in John Wakeley's group_ in the Department of
+`Organismic and Evolutionary Biology`_ at Harvard University. You can reach me at
+pwilton@fas.harvard.edu.
+
+.. _group: http://www.oeb.harvard.edu/faculty/wakeley/wakeleylab.htm
+.. _Organismic and Evolutionary Biology: http://www.oeb.harvard.edu/
+
+I study theoretical population genetics. I am interested in developing models
+that can be used to infer evolutionary and demographic history from patterns of
+genetic variation. Right now I am working in two areas: 
+
+#. sequentially Markov coalescent models and related methods and
+#. population pedigrees and their effect on the coalescent process and genetic
+   variation.
+
+Publications
+============
+
+**Wilton, P.R.**, Carmi, S., and Hobolth, A. The SMC’ is a highly accurate
+approximation to the ancestral recombinati. Genetics, in press.
+(`arXiv <http://arxiv.org/abs/1501.02847v2>`__)
+
+Rheindt, F.E., Prawiradilaga, D.M., Suparno, Ashari, H., and **Wilton, P.R.**
+`New and significant island records, range extensions and elevational
+extensions of birds in eastern Sulawesi, its nearby satellites, and Ternate
+<files/rheindt_et_al_2014_treubia.pdf>`__. Treubia 2014.
+
+Carmi, S., **Wilton, P.R.**, Wakeley, J., and Pe’er, I. `A renewal theory
+approach to IBD sharing
+<http://www.sciencedirect.com/science/article/pii/S0040580914000562>`_. 
+Theoretical Population Biology 2014.
+
+Rheindt, F.E., Fujita, M.K., **Wilton, P.R.**, Edwards, S.V., 2014.
+`Introgression and phenotypic assimilation in Zimmerius flycatchers
+(Tyrannidae): Population genetic and phylogenetic inferences from genome-wide
+SNPs <http://sysbio.oxfordjournals.org/content/63/2/134>`_. Systematic Biology
+2014.
+
+**Wilton, P.R.**, Sloan, D.B., Logsdon Jr, J.M., Doddapaneni, H., and Neiman,
+M. `Characterization of transcriptomes from sexual and asexual
+lineages of a New Zealand snail (Potamopyrgus antipodarum)
+<http://onlinelibrary.wiley.com/doi/10.1111/1755-0998.12051/abstract>`__.
+Molecular Ecology Resources 2013.
+
+Neiman, M., Larkin, K., Thompson, A.R., and **Wilton, P.** `Male offspring
+production by asexual Potamopyrgus antipodarum, a New Zealand snail
+<http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3375405/>`_. Heredity 2012.
+
+Willacker, J.J., von Hippel, F.A., **Wilton, P.R.**, and Walton, K.M.
+`Classification of threespine stickleback along the benthic–limnetic axis
+<http://onlinelibrary.wiley.com/doi/10.1111/j.1095-8312.2010.01531.x/full>`_.
+Biological Journal of the Linnean Society 2010.
+
+Software
+=========
+
+`Pedigree simulator <https://github.com/ammodramus/coalped>`_
+  A program to simulate coalescence through randomly-generated population
+  pedigrees. The simulator can accommodate variable population sizes, multiples
+  demes, variable migration rates, and other features. The program can output
+  distributions of pairwise coalescence times, and it can output infinite-alleles
+  and infinite-sites mutation data in a variety of formats.
+
+`Infinite-sites likelihood calculator <https://github.com/ammodramus/infsites>`_
+  Calculates sampling probabilities under the infinite-sites mutation model in
+  a single- or two-deme setting. Uses the method of `Wu (2010)
+  <http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=5383348>`__.
+
+Teaching
+========
+
+Statistics for Biologists (Fall 2014)
+ I was a teaching assistant for OEB 153, `Statistics for
+ Biologists <http://isites.harvard.edu/course/colgsas-49559>`__. For the course
+ I created a series of labs introducing the `R <http://www.r-project.org/>`__ statistical
+ computing environment. The labs are available on `github
+ <https://github.com/ammodramus/R-labs>`__.
+
+Coalescent Theory (Fall 2012)
+ I was a teaching assistant for OEB 252, Coalescent Theory,
+ a graduate-level course.
+
+CV
+====
+
+Coming soon.
