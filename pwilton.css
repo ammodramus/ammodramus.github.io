@@ -26,7 +26,7 @@ div.document, body {
     margin: auto;
     width: 100%;
     font-size: 16pt;
-    margin-bottom: 10em;
+    margin-bottom: 1em;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -37,10 +37,19 @@ h1, h2, h3, h4, h5, h6 {
     /*margin-left: -1em;*/
     font-weight: normal;
 }
-.title {font-size: 2.5em; text-align: center;}
-.subtitle {font-size:1em; text-align: center; margin-top: 0;}
+.title {
+    font-size: 2.5em; 
+    text-align: center;
+}
+
+.subtitle {
+    font-size:1em; text-align: center; margin-top: 0;
+}
+
 h1 {font-size: 1.7em;}
+
 h2 {font-size: 1.5em;}
+
 h3 {font-size: 1.3em;}
 
 
@@ -57,10 +66,12 @@ a.toc-backref {
     color: #d33682;
     font-weight: normal;
 }
+
 a {
     color: #268bd2;
     text-decoration: none;
 }
+
 a:hover {
     color: #cb4b16;
     text-decoration: none;
@@ -80,6 +91,19 @@ a:hover {
     margin-left: 3em;
     font-size: 0.8em;
 }
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: none;
+    shape-rendering: crispEdges;
+}
+
+.axis text {
+    font-family: sans-serif;
+    font-size: 11px;
+}
+
 object, img {
     display:block;
     margin: auto;
@@ -176,3 +200,14 @@ table * {
     h2 {font-size: 16pt !important}
     h3 {font-size: 14pt !important}
 }
+
+svg {
+  font: 10px sans-serif;
+  padding: 3px;
+  margin: 1px;
+  background-color: transparent;
+  display:block;
+  float: center;
+  margin:auto;
+}
+
