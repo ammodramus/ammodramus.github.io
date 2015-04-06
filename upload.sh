@@ -1,1 +1,1 @@
-scp -r index.html *.css files/ pwilton@fas.harvard.edu:~/public_html/
+scp -r index.html *.css wf.js files/ pwilton@fas.harvard.edu:~/public_html/
