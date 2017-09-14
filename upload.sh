@@ -1,1 +1,1 @@
-scp -r index.html pwiltongpg.txt *.css files/ photos/ pwilton@fas.harvard.edu:~/public_html/
+scp -r index.html pwiltongpg.txt *.css files/ photos/ pwilton@ssh.ocf.berkeley.edu:~/public_html/
