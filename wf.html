@@ -1,135 +1,30 @@
-<!DOCTYPE html>
-<meta charset="utf-8">
-<style>
-
-svg {
-  font: 10px sans-serif;
-  padding: 3px;
-  margin: 1px;
-  background-color: transparent;
-  display:block;
-  float: center;
-  margin:auto;
-}
-
-</style>
-
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Docutils 0.8.1: http://docutils.sourceforge.net/" />
+<title>Wright-Fisher Process</title>
+<link rel="stylesheet" href="pwilton.css" type="text/css" />
+</head>
 <body>
+<div class="document">
+
+<h2>Interactive Wright-Fisher Process</h2>
+
+<div class="section", id="wf">
+
+<p>Toying around with JavaScript, I created this interactive graphic of a
+Wright-Fisher process. The process features symmetric mutation with
+<em>&#952</em> = <em>4N&#956</em> = 1. Click any present-day individual
+(along the bottom row) to follow the ancestry of that individual and create
+gene genealogies. Each refresh of this page produces a new simulation of
+the process.</p>
+
 <script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="wf.js"></script>
 
-<script>
-
-var N = 30, numGens = 30;
-
-
-function runifd(a,b){
-   var x = Math.floor(a+(b-a+1)*Math.random());
-   return x;
-}
-
-var theta = 2.0;
-var mu = theta / (2.0 * N);
-
-var relationships = [];
-var genotypes = [];
-genotypes.push([]);
-for (var j = 0; j < N; j++){
-    genotypes[0][j] = 0;
-}
-for (var t = 0; t < numGens; t++){
-    relationships[t] = [];
-    if(t != 0)
-        genotypes[t] = [];
-    for (var j = 0; j < N; j++){
-        relationships[t][j] = runifd(0,N);
-        if (t == 0){
-            continue;
-        }
-        var mut = Math.random() <= mu;
-        if (mut){
-            genotypes[t][j] = (genotypes[t-1][relationships[t][j]] == 1)?0:1;
-        }
-        else {
-            genotypes[t][j] = genotypes[t-1][relationships[t][j]];
-        }
-    }
-}
-
-positions = [];
-for(t = 0; t < numGens; t++){
-    for(j = 0; j < N; j++){
-        positions.push({x: j, y: t});
-    }
-}
-
-var width = 600;
-var interCircle = width / N;
-var circleToSpaceRatioX = 0.75;
-var circleToSpaceRatioY = 1.5;
-var radius = Math.floor(circleToSpaceRatioX * interCircle) / 2.0;
-var height = interCircle*numGens * circleToSpaceRatioY/circleToSpaceRatioX;
-
-var margin = 20;
-
-var xscaler = d3.scale.linear()
-    .domain([0,N])
-    .rangeRound([margin,width-margin]);
-
-var yscaler = d3.scale.linear()
-    .domain([0,numGens])
-    .rangeRound([margin,height-margin]);
-
-var svg = d3.select("body")
-    .append("svg")
-    .attr("width", width)
-    .attr("height", height);
-
-var ancestralColor = "#BCBCBC";
-var derivedColor = "#c82829";
-
-function redraw(){
-    svg.selectAll("circle")
-        .data(positions)
-        .enter()
-        .append("circle")
-        .attr("cx", function(d) { return xscaler(d.x) })
-        .attr("cy", function(d) { return yscaler(d.y) })
-        .attr("r", radius)
-        .attr("fill", function(d) { if (genotypes[d.y][d.x] == 1) return derivedColor; else return ancestralColor });
-}
-redraw();
-
-xAxis = d3.svg.axis()
-    .scale(xscaler);
-    .orient("bottom");
-yAxis = d3.svg.axis()
-    .scale(yscaler);
-
-svg.append("g")
-    .call(xAxis);
-            
-            
-
-</script>
-
+</div>
+</div>
 </body>
-
-
-
-<!--
-var data = [4, 8, 15, 16, 23, 42];
-
-var x = d3.scale.linear()
-    .domain([0, d3.max(data)])
-    .range([0, 420]);
-
-d3.select(".chart")
-  .selectAll("div")
-    .data(data)
-  .enter().append("div")
-    .style("width", function(d) { return x(d) + "px"; })
-    .text(function(d) { return d; });
-
-</script>
--->
 
