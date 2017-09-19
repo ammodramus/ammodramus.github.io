@@ -67,12 +67,17 @@ h3 {font-size: 1.3em;}
 
 hr {
     margin: 2em;
-    border: 0;
+    border: 1em;
+    margin-left: 9em;
+    margin-right: 9em;
     text-align: center;
+    border-bottom: 1px solid #4d4d4c;
 }
+/*
 hr:after{
     content:"❃	❃	❃";
 }
+*/
 
 a.toc-backref {
     color: #d33682;
