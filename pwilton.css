@@ -17,7 +17,7 @@ body{
     background-color: #f2f6ff; /* blueish, again */
 }
 div.document{
-    font-family: 'TeX Gyre Pagella', 'Palatino', serif;
+    font-family: 'Adobe Caslon','Georgia','Times New Roman','Times',serif;
     /*background-color: #f0f2fd;*/ /* blueish */
     /*background-color: #fdfdfd;*/ /* gray */
     /*background-color: #f0fde3;*/ /* greenish */
